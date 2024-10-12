@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/deploy-github/" element={<HomePage />} />
         <Route path="/product-list" element={<ProductList />} />
         <Route path="/add-product/*" element={<AddProductHome />} />
         <Route path="/order-list" element={<OrderList />} />

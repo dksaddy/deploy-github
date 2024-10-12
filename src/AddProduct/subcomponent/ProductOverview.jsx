@@ -9,7 +9,7 @@ import {
   CardMedia,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { addObjectToLocalStorage } from "../../Database";
+
 import { VolumeUp } from "@mui/icons-material";
 import useSound from "use-sound";
 
@@ -126,7 +126,7 @@ function ProductOverview({ info, setInfo }) {
                 },
           }}
           onClick={()=>{
-            addObjectToLocalStorage(info)
+            //addObjectToLocalStorage(info)
           }}
         >
           জমা দিন

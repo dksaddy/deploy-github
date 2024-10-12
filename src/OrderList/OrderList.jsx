@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from './Card';
-import { getArrayFromLocalStorage, deleteObjectFromLocalStorage} from '../Database';
+import { data } from '../Database';
 import { Box ,Button} from '@mui/material';
 
 const OrderList = () => {
-  const item = getArrayFromLocalStorage('myObjectsArray')
+  const item = data;
   return (
     <>
     <Box
@@ -38,7 +38,7 @@ const OrderList = () => {
     </Box>
       <h1 style={{ textAlign: 'center' }}>My Orders List</h1>
       {item && item.map((product, index) => (
-        <Card item={product} key={index} id={index} deleteObject={deleteObjectFromLocalStorage}/>
+        <Card item={product} key={index} id={index} />
       ))}
       </Box>
 

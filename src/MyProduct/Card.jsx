@@ -21,7 +21,7 @@ const Card = ({ item }) => {
       <CardMedia
         component="img"
         height="200"
-        image='/potato.webp'
+        image='./begun.jpg'
         alt='Alu'
         sx={{ borderTopLeftRadius: 10, borderTopRightRadius: 10 }}
       />

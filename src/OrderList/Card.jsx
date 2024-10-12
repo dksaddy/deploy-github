@@ -4,7 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import DoneIcon from "@mui/icons-material/Done";
 import { VolumeUp } from "@mui/icons-material";
 import useSound from "use-sound";
-function Card({ item, id, deleteObject }) {
+function Card({ item, id }) {
   const [play, { stop }] = useSound("../../Sounds/consent.mp3", {
     volume: 1,
     soundEnabled: true,
@@ -15,9 +15,15 @@ function Card({ item, id, deleteObject }) {
     play();
   };
   const [buttonText, setButtonText] = useState(""); // Initial button text
+  const [buttonText1, setButtonText1] = useState(""); // Initial button text
 
   const handleDoneClick = () => {
     setButtonText("অর্ডার সম্পুর্ণ হয়েছে"); // Change text to 'Completed' when clicked
+    // Add any additional logic for when the done button is clicked
+  };
+
+  const handleDoneClick1 = () => {
+    setButtonText1("Batil hoyeche"); // Change text to 'Completed' when clicked
     // Add any additional logic for when the done button is clicked
   };
 
@@ -123,12 +129,9 @@ function Card({ item, id, deleteObject }) {
             <Button
               variant="contained"
               sx={{ background: "red" }}
-              onClick={() => {
-                deleteObject("myObjectsArray", id);
-                window.location.reload();
-              }}
+              onClick={handleDoneClick1}
             >
-              <CloseIcon />
+              {buttonText1 === "" ? <CloseIcon /> : buttonText1}
             </Button>
           </Grid>
         </Grid>

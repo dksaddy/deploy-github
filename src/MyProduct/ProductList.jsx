@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from './Card';
-import { getArrayFromLocalStorage } from '../Database';
+import { data } from '../Database';
 import { Box ,Button} from '@mui/material';
 const ProductList = () => {
-  const item = getArrayFromLocalStorage('myObjectsArray')
+  const item = data;
   return (
     <>
     
